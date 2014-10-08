@@ -27,7 +27,7 @@ window.Appjangle.install = (id, script, contextVariables, callback) ->
       exception : e,
       jsException: e,
       stacktrace : e.stack,
-      origin : this
+      origin : "Evaluating '"+sourceUrl+"'"
     }
     return
     
