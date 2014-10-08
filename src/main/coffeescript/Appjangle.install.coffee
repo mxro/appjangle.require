@@ -19,12 +19,12 @@ window.Appjangle.install = (id, script, contextVariables, callback) ->
   if contextVariables
     for k, v in contextVariables
       vars += 'var '+k+' = contextVariables['+k+'];'
-  console.log 'eval '+sourceUrl
+  # console.log 'eval '+sourceUrl
   try
     lib = eval(sourceUrl+vars+script)
   catch e
     callback {
-      exception : "Exception while evaluating "+sourceUrl+" "+e,
+      exception : e,
       jsException: e,
       stacktrace : e.stack,
       origin : "Evaluating '"+sourceUrl+"'"
