@@ -19,8 +19,8 @@ window.Appjangle.install = (id, script, contextVariables, callback) ->
   if contextVariables
     for k, v in contextVariables
       vars += 'var '+k+' = contextVariables['+k+'];'
-  console.log 'eval '+sourceUrl
-  console.log script
+  #console.log 'eval '+sourceUrl
+  #console.log script
   try
     lib = eval(sourceUrl+vars+script)
   catch e
