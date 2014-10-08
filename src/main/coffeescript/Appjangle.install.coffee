@@ -12,7 +12,7 @@ window.Appjangle.install = (id, script, contextVariables, callback) ->
     return
   
  
-  sourceUrl = "//@ sourceURL="+id+".value.js\n"
+  sourceUrl = "//# sourceURL="+id+".value.js\n"
   
   # Defining variables available in script
   vars = ""
