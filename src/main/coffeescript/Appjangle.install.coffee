@@ -24,7 +24,7 @@ window.Appjangle.install = (id, script, contextVariables, callback) ->
     lib = eval(sourceUrl+vars+script)
   catch e
     callback {
-      exception : e,
+      exception : "Exception while eval,
       jsException: e,
       stacktrace : e.stack,
       origin : "Evaluating '"+sourceUrl+"'"
